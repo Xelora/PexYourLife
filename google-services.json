@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "813617107505",
+    "firebase_url": "https://pexyourlife-31f12.firebaseio.com",
+    "project_id": "pexyourlife-31f12",
+    "storage_bucket": "pexyourlife-31f12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813617107505:android:7e08870127e19056",
+        "android_client_info": {
+          "package_name": "com.eipteam.pexyourlife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813617107505-11gb69u1s2vno0u7us5hqd0qdqkvjd8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh6DZS6iPr3Ri-ScUYceV5MmH2lMUQUWs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
