@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sign in</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Sign in
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-input type="text" placeholder="Name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Firstname"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-datetime placeholder="Birthday : MM/DD/YYYY" displayFormat="MM/DD/YYYY"></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-input type="email" placeholder="Email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Confirm Password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <button ion-button block color ="pex" (click)="registerTapped()">Register</button>
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
