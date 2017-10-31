@@ -7,11 +7,11 @@ import {Attr_activitiesPage} from "../attr_activities/attr_activities";
   templateUrl: 'activities.html'
 })
 export class ActivitiesPage {
-  selectedItem: any;
   icons: string[];
   titles: string[];
+  activitiesrand: string[];
   pages: any[];
-  items: Array<{title: string, icon: string}>;
+  items: Array<{title: string, icon: string, activities: string[]}>;
 
   constructor(public navCtrl: NavController) {
 
@@ -21,18 +21,21 @@ export class ActivitiesPage {
     this.titles = ['Sport', 'Reading', 'Movies', 'Creativity', 'Music', 'Video games',
       'Role Play', 'Sleep', 'Cooking', 'Group'];
 
-//    this.pages = [SportPage, ReadingPage, MoviesPage, CreativityPage, MusicPage, VideoGamesPage, RolePlayPage, SleepPage, CookingPage, GroupPage];
+    this.activitiesrand = ['Football', 'Basketball', 'Fiction', 'Fantasy', 'Piano', 'Painting',
+      'Sculpting', 'Shooting game', 'Board game', 'Escape game'];
 
     this.items = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < this.titles.length; i++) {
       this.items.push({
         title: this.titles[i],
-        icon: this.icons[i]
+        icon: this.icons[i],
+        activities: this.activitiesrand
       });
     }
   }
 
   itemTapped(item) {
+
     this.navCtrl.push(Attr_activitiesPage, {
       item: item
     });

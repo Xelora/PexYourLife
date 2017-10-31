@@ -6,3 +6,23 @@
     <ion-title>{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
+
+<ion-content>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-item>
+    <ion-label>Timer</ion-label>
+    <ion-select>
+      <ion-option  *ngFor="let sel1 of hourop">{{sel1}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-card>
+    <ion-card-header><b>Activities</b></ion-card-header>
+    <ion-card-content>
+    <ion-list>
+      <button ion-item *ngFor="let item of activities">
+        {{item}}
+      </button>
+    </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
