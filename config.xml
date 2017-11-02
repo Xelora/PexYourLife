@@ -86,4 +86,7 @@
         <variable name="APP_ID" value="139221283304554" />
         <variable name="APP_NAME" value="pexyourlifeauth" />
     </plugin>
+    <plugin name="cordova-plugin-googleplus" spec="^5.1.1">
+        <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.216222563379-39dn3rq18o3m6jvinqm2fad4sklk5k84" />
+    </plugin>
 </widget>
