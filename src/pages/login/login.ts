@@ -4,7 +4,7 @@ import {SigninPage} from '../signin/signin';
 import {HomePage} from '../home/home';
 import {Facebook} from '@ionic-native/facebook';
 import {GooglePlus} from '@ionic-native/google-plus';
-import {AngularFireModule} from 'angularfire2';
+
 import firebase from 'firebase';
 
 @Component({
