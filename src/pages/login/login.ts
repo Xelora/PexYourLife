@@ -14,24 +14,24 @@ import firebase from 'firebase';
 
 export class LoginPage {
 
-  userData = null;
-
   constructor(public navCtrl: NavController, menu: MenuController,
-              private facebook: Facebook, public googleplus: GooglePlus) {
+              private facebook: Facebook, public googlePlus: GooglePlus) {
     menu.enable(false);
   }
 
   loginWithGooglePlus() {
-    this.googleplus.login({
-      'webClientId': '216222563379-39dn3rq18o3m6jvinqm2fad4sklk5k84.apps.googleusercontent.com',
-      'offline': true
-    }).then(res => {
-      firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.IdToken())).then()
-      .then(login_success => {
-        alert('LOGIN SUCCESS')
-      }).catch(login_fail => {
-        alert('LOGIN FAILED')
+    this.googlePlus.login({
+      'webClientId': '216222563379-39dn3rq18o3m6jvinqm2fad4sklk5k84.apps.googleusercontent.com'
+    }).then((res) => {
+      const firecards = firebase.auth.GoogleAuthProvider.credential(res.idToken);
+      firebase.auth().signInWithCredential(firecards).then((res) => {
+        alert('Connexion done ' + res);
+        this.navCtrl.setRoot(HomePage);
+      }).catch((err) => {
+        alert('Firebase auth failed' + err);
       })
+    }).catch((err) => {
+      alert('Error' + err);
     })
   }
 
@@ -39,9 +39,10 @@ export class LoginPage {
     this.facebook.login(['email']).then(res => {
       const fc = firebase.auth.FacebookAuthProvider.credential(res.authResponse.accessToken);
       firebase.auth().signInWithCredential(fc).then(login_success => {
-        alert('connexion done')
+        alert('Connexion done ' + login_success);
+        this.navCtrl.setRoot(HomePage);
       }).catch(login_fail => {
-        alert('firebase errc')
+        alert('Firebase auth failed' + login_fail)
       })
     }).catch(err => {
       alert(JSON.stringify(err))
