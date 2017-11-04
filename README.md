@@ -1,26 +1,40 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## Project : PexYourLife
+Group : Mobile Hybrid Project hoang-du.le@epitech.eu
+hoang-du.le@epitech.eu | Hoang-Du LE                                           Assisté au cours
 
-## How to use this template
+maurice.mangala-yafu@epitech.eu  | Maurice MANGALA-YAFU                        Assisté au cours
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+Accès Firebase :                                          
+account: pexyourlife.eip@gmail.com
+mdp: pexyourlife2018
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+### Contenu :
 
-### With the Ionic CLI:
+Notification avec firebase
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+Page Login (répertoire: login) : 
+ - Connection Google et Facebook avec firebase
+ - Connection email non foncionnel
+ 
+Page SignIn (répertoire: signin) : 
+ - formulaire non fonctionnel 
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
-```
+Page Profil(répertoire: home et app):
+ - Side Menu qui est affiché dans les autres pages à part les pages login et signin 
 
-Then, to run it, cd into `mySideMenu` and run:
+Page Activities (répertoire: activities): 
+ - gènere une liste avec leurs icones qui est stocké en brute dans le code 
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+Page Attr_Activities (répertoire attr_activities): 
+ - récupère l'élément de la liste appuyé dans la page Activities et remplace le titre par l'élément. 
+ - Génère une liste stocké en brute dans le code et l'affiche. 
+ - Barre de recherche permettant filtrer la liste. 
+ - Bouton Select suivant l'option sélectionné modifie une variable qui va être enovyer dans la prochaine page.
+ - Bouton Item envoie les la variable (secondes) dans la page Timer 
+ 
+Page Timer (répertoire: timer) :
+ - Récupère la variable(secondes) pour initialiser le timer
+ - Converti les secondes en heures et en minutes
+ - mise en place simple de l'affichage du timer
+ - bouton stop pour arrêter le timer et le remettre à zéro
+ - bouton pause arrête le timer et bouton relance le timer
