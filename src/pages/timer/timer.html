@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Timer</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <button ion-button *ngIf="timersec && timersec > 0" large full clear>{{timer.displayTime}}</button>
+      </ion-item>
+      <ion-item *ngIf="timersec && timersec > 0">
+        <button ion-button icon-left clear small color="danger" (click)="stopTimer()" item-left *ngIf="timer.hasStarted && !timer.hasFinished">
+        <ion-icon name="square"></ion-icon>
+        Stop
+        </button>
+        <button ion-button icon-left clear small color="primary" (click)="pauseTimer()" item-right *ngIf="timer.runTimer && timer.hasStarted && !timer.hasFinished">
+          <ion-icon name="pause"></ion-icon>
+          Pause
+        </button>
+        <button ion-button icon-left clear small color="primary" (click)="resumeTimer()" item-right *ngIf="!timer.runTimer && timer.hasStarted && !timer.hasFinished">
+          <ion-icon name="play"></ion-icon>
+          Resume
+        </button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

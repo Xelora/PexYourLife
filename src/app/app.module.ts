@@ -15,6 +15,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {LoginPage} from '../pages/login/login';
 import {SigninPage} from '../pages/signin/signin';
 import {Attr_activitiesPage} from '../pages/attr_activities/attr_activities';
+import {TimerPage} from "../pages/timer/timer";
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAuxobMGnH4UNMDr-XbiwEyZsTeTPhf-84',
@@ -34,7 +35,8 @@ firebase.initializeApp(firebaseConfig);
     ActivitiesPage,
     LoginPage,
     SigninPage,
-    Attr_activitiesPage
+    Attr_activitiesPage,
+    TimerPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ firebase.initializeApp(firebaseConfig);
     ActivitiesPage,
     LoginPage,
     SigninPage,
-    Attr_activitiesPage
+    Attr_activitiesPage,
+    TimerPage
   ],
   providers: [
     StatusBar,

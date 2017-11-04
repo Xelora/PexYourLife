@@ -89,4 +89,5 @@
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.216222563379-39dn3rq18o3m6jvinqm2fad4sklk5k84" />
     </plugin>
     <engine name="android" spec="~6.2.3" />
+    <plugin name="phonegap-plugin-push" spec="^2.0.0" />
 </widget>
